@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Age Calculator</title>
+
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <div class="container">
+   <form  onsubmit="calculateAge(event)" novalidate>
+    <div class="inputs">
+      <div class="input1">
+        <label for="day">DAY</label>
+        <input type="number" name="day" id="day" placeholder="DD" required>
+        <p id="error" class="day-error"></p>
+      </div>
+
+      <div class="input2">
+        <label for="month">MONTH</label>
+        <input type="number" name="month" id="month" placeholder="MM" required>
+        <p id="error" class="month-error"></p>
+      </div>
+
+      <div class="input3">
+        <label for="year">YEAR</label>
+        <input type="number" name="year" id="year" placeholder="YYYY" required>
+        <p id="error" class="year-error"></p>
+      </div>
+    </div>
+
+    <div class="button-con"><div class="line"></div><button type="submit"><img src="assets/images/icon-arrow.svg"></button></div>
+   </form>
+
+    <div class="output-con">
+      <p class="output" id="year-output">- -</p><p class="wording" id="year-wording">years</p>
+    </div>
+
+    <div class="output-con">
+      <p class="output" id="month-output">- -</p><p class="wording" id="month-wording">months</p>
+    </div>
+
+    <div class="output-con">
+      <p class="output" id="day-output">- -</p><p class="wording" id="day-wording">days</p>
+    </div>
+
+  </div>
+  
+  <script src="main.js"></script>
+</body>
+</html>
