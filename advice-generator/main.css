@@ -1,0 +1,80 @@
+:root {
+--LightCyan: hsl(193, 38%, 86%);
+--NeonGreen: hsl(150, 100%, 66%);
+--GrayishBlue: hsl(217, 19%, 38%);
+--DarkGrayishBlue: hsl(219, 29%, 31%);
+--DarkBlue: hsl(219, 35%, 19%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--DarkBlue);
+    padding: 0.7rem;
+}
+
+.container {
+    width: 40rem;
+    height: 20rem;
+    background-color: var(--DarkGrayishBlue);
+    border-radius: 1rem;
+    position: relative;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+h2 {
+    color: var(--NeonGreen);
+    font-size: 0.7rem;
+    margin-bottom: 5%;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+p {
+    color: var(--LightCyan);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.divider {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    bottom: 18%;
+}
+
+.divider img {
+   width: 100%;
+   height: auto;
+}
+
+.dice {
+    position: absolute;
+    top: 91%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--NeonGreen);
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dice:hover {
+    box-shadow: 0 0 1.5rem var(--NeonGreen);
+}
