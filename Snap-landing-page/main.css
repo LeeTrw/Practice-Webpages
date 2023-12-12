@@ -1,0 +1,412 @@
+:root {
+--AlmostWhite: hsl(0, 0%, 98%);
+--MediumGray: hsl(0, 0%, 41%);
+--AlmostBlack: hsl(0, 0%, 8%);
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/Epilogue-VariableFont_wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--AlmostWhite);
+}
+
+header {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.logo-con {
+    width: fit-content;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4rem;
+    margin-left: 2rem;
+}
+
+nav {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 1.8rem;
+    color: var(--MediumGray);
+    font-weight: 500;
+}
+
+nav ul li:hover {
+    color: #000;
+}
+
+.arrow-con:hover {
+    filter: contrast(10);
+}
+
+.arrow-con {
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 0.1rem;
+    margin-left: 0.2rem;
+}
+
+.login-con {
+    width: fit-content;
+    margin-right: 2rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+
+.login-con button {
+    width: 5.5rem;
+    height: 2.2rem;
+    background-color: var(--AlmostWhite);
+    color: var(--MediumGray);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.login-con button:hover {
+    color: #000;
+    border-color: #000;
+}
+
+.login-con .login {
+    margin-right: 1rem;
+    border: none;
+}
+
+.login-con .register {
+    border-radius: 0.7rem;
+    border: 1px solid var(--MediumGray);
+}
+
+/* menu toggle */
+.parent-menu {
+    position: relative;
+}
+
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    margin-top: 0.7rem;
+    height: fit-content;
+    background-color: #fff;
+    box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    z-index: 10;
+    padding: 1rem;
+}
+
+.submenu li {
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+}
+
+.submenu li img {
+    margin-right: 0.4rem;
+}
+
+#features-menu {
+    right: 0;
+    width: 11rem;
+}
+
+#company-menu {
+    left: 0;
+    width: 9rem;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+/* main page */
+
+.container {
+    display: flex;
+    place-content: center center;
+    height: 80%;
+    width: 70%;
+    margin: auto;
+}
+
+.left-con {
+    width: 60%;
+    height: 100%;
+}
+
+.left-con h1 {
+    margin-top: 16%;
+    margin-bottom: 6%;
+    font-size: 3.8rem;
+    letter-spacing: 1px;
+}
+
+.left-con p {
+    width: 65%;
+    color: var(--MediumGray);
+    margin-bottom: 6%;
+}
+
+.left-con button {
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #000;
+    width: 8rem;
+    height: 2.4rem;
+    border-radius: 0.7rem;
+    margin-bottom: 10%;
+    cursor: pointer;
+}
+
+.left-con button:hover {
+    background-color: var(--AlmostWhite);
+    border: 1px solid #000;
+    color: #000;
+}
+
+.left-con .brands img {
+    margin: 1rem;
+}
+
+.right-con {
+    height: 100%;
+    width: 40%;
+    background-image: url('images/image-hero-desktop.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+
+.mbl-menu,
+.mbl-img {
+    display: none;
+}
+
+@media screen and (max-width:1265px) {
+    .container {
+        width: 80%;
+    }
+    
+    .left-con h1 {
+        font-size: 3rem;
+    }
+    
+    .left-con .brands img {
+        margin: 0.7rem;
+        width: 5rem;
+        height: auto;
+    }
+}
+@media screen and (max-width:900px) and (min-width:801px) {
+    .left-con h1 {
+        font-size: 2.7rem;
+    }
+    
+    .left-con .brands img {
+        margin: 0.5rem;
+        width: 4rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        height: fit-content;
+        overflow-x: hidden;
+    }
+    
+    header {
+        position: relative;
+    }
+
+    .mbl-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        margin-right: 0.5rem;
+        height: 4rem;
+        width: 4rem;
+        z-index: 100;
+    }
+
+    .mbl-menu img {
+        position: absolute;
+    }
+
+    nav {
+        display: flex;
+        align-items: flex-start;
+        width: 60vw;
+        height: 100vh;
+        background-color: var(--AlmostWhite);
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-top: 4rem;
+        padding-left: 3rem;
+        flex-direction: column;
+        right: -70vw;
+        transition: transform 0.6s ease, right 0.6s ease;
+        z-index: 10;
+    }
+
+    nav.open {
+        right: 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        margin-bottom: 0.7rem;
+    }
+    
+    nav ul li {
+        margin-right: 0rem;
+        margin-bottom: 1.3rem;
+    }
+    
+    .login-con {
+        width: fit-content;
+        margin-right: 0rem;
+        flex-direction: column;
+        position: static;
+        height: 8rem;
+    }
+    
+    .login-con button {
+        width: 10rem;
+    }
+    
+    .login-con .login {
+        margin-right: 0rem;
+    }
+    
+    /* menu toggle */
+    .parent-menu {
+        position: static;
+    }
+    
+    .submenu {
+        display: none;
+        position: static;
+        margin-top: 0.7rem;
+        height: fit-content;
+        background-color: var(--AlmostWhite);
+        box-shadow: none;
+        border-radius: 0em;
+        z-index: 10;
+        padding: 0rem;
+        padding-left: 2rem;
+        overflow: hidden;
+    }
+    
+    .submenu li {
+        margin-top: 0.35rem;
+        margin-bottom: 0.35rem;
+    }    
+    
+    #company-menu {
+        width: 7rem;
+    }
+    
+    .show {
+        display: block;
+    }
+    
+    .hide {
+        display: none;
+    }
+
+    .opacity {
+        opacity: 0.2;
+    }
+    
+    /* main page */
+    .mbl-img {
+        display: block;
+        background-image: url('images/image-hero-mobile.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 15rem;
+    }
+
+    .container {
+        text-align: center;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .left-con {
+        width: 80%;
+        height: 100%;
+    }
+    
+    .left-con p {
+        width: 100%;
+    }
+
+    .left-con .brands img {
+        margin: 0.5rem;
+        width: 4rem;
+    }
+    
+    .right-con {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+   .left-con .brands img {
+        margin: 0.3rem;
+        width: 3rem;
+    }
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
+    nav {
+        height: fit-content;
+        padding-bottom: 3rem;
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Intro Page</title>
+
+  <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+
+  <header>
+    <div class="logo-con"><img src="images/logo.svg"></div>
+    <div class="mbl-menu">
+      <img id="open" src="images/icon-menu.svg" onclick="mobileMenu()">
+      <img class="hide" id="close" src="images/icon-close-menu.svg" onclick="mobileMenu()">
+    </div>
+    <nav>
+      <ul>
+        <li class="parent-menu" onclick="toggleMenu('features-menu', 1)">
+          Features
+          <div class="arrow-con">
+            <img id="arrow-down1" src="images/icon-arrow-down.svg">
+            <img class="hide" id="arrow-up1" src="images/icon-arrow-up.svg">
+          </div>
+        
+          <ul class="submenu" id="features-menu">
+            <li><img src="images/icon-todo.svg">Todo List</li>
+            <li><img src="images/icon-calendar.svg">Calendar</li>
+            <li><img src="images/icon-reminders.svg">Reminders</li>
+            <li><img src="images/icon-planning.svg">Planning</li>
+          </ul>
+        </li>
+
+        <li class="parent-menu" onclick="toggleMenu('company-menu', 2)">
+          Company
+          <div class="arrow-con">
+            <img id="arrow-down2" src="images/icon-arrow-down.svg">
+            <img class="hide" id="arrow-up2" src="images/icon-arrow-up.svg">
+          </div>
+        
+        
+          <ul class="submenu" id="company-menu">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </ul>
+        </li>
+        
+        <li>Careers</li>
+        <li>About</li>
+      </ul>
+
+      <div class="login-con">
+        <button class="login">Login</button>
+        <button class="register">Register</button>
+      </div>
+    </nav>
+    
+  </header>
+
+  <div class="mbl-img"></div>
+
+  <div class="container">
+    
+    <div class="left-con">
+
+      <h1>Make <br> remote work</h1>
+      
+      <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+      </p>
+
+      <button>Learn more</button>
+
+      <div class="brands">
+        <img src="images/client-databiz.svg">
+        <img src="images/client-audiophile.svg">
+        <img src="images/client-meet.svg">
+        <img src="images/client-maker.svg">
+      </div>
+    </div>
+    
+    <div class="right-con"></div>
+  </div>
+  
+  <script src="main.js"></script>
+</body>
+</html>
